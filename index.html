@@ -11,11 +11,11 @@
  <div class="cabecero">
     <div class="presupuesto">
         <div class="presupuesto_titulo"> presupuesto disponible</div>
-        <div class="presupuesto_valor">1000</div>
+        <div class="presupuesto_valor" id="presupuesto">0</div>
         <div class="presupuesto_ingreso limpiaEstilos">
            <div class="presupuesto_ingreso--texto">ingresos</div>
            <div class="derecha">
-              <div class="presupuesto_ingreso--valor">500</div>
+              <div class="presupuesto_ingreso--valor" id="ingresoTotal">0</div>
               <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
            </div>
         </div>  
@@ -45,14 +45,11 @@
    </div>
  </form>
 
-
-
-
   <div class="contenedor limpiarEstilo">
       <div class="ingreso">
            <h2 class="ingreso_titulo"> ingresos</h2>
-           <div class="lista-ingresos">
-             <div class="elemento limpiaEstilos">
+           <div class="lista-ingresos" id="lista-ingresos">
+ <!--          <div class="elemento limpiaEstilos">
                   <div class="elemento_descripcion">sueldo</div>
                   <div class="derecha limpiaEstilos">
                       <div class="elemento_valor">400</div>
@@ -63,7 +60,8 @@
                       </div>
                   </div>
               </div>
-         </div>
+                -->     
+           </div>
       </div>
 
       <div class="egreso">
@@ -86,7 +84,7 @@
 
 
 
-
+<script src="js/app.js"></script>
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
