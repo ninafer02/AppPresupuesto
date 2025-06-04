@@ -8,48 +8,48 @@
 </head>
 <body>
     
- <div class="cabecero">
+<div class="cabecero">
     <div class="presupuesto">
         <div class="presupuesto_titulo"> presupuesto disponible</div>
         <div class="presupuesto_valor" id="presupuesto">0</div>
         <div class="presupuesto_ingreso limpiaEstilos">
-           <div class="presupuesto_ingreso--texto">ingresos</div>
-           <div class="derecha">
-              <div class="presupuesto_ingreso--valor" id="ingresoTotal">0</div>
-              <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
-           </div>
-        </div>  
+            <div class="presupuesto_ingreso--texto">ingresos</div>
+            <div class="derecha">
+                <div class="presupuesto_ingreso--valor" id="ingresoTotal">0</div>
+                <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+            </div>
+        </div>
 
         <div class="presupuesto_egreso limpiaEstilos">
             <div class="presupuesto_egreso--texto">egreso</div>
             <div class="derecha">
-               <div class="presupuesto_egreso--valor">100</div>
-               <div class="presupuesto_egreso--porcentaje">&nbsp;</div>
+                <div class="presupuesto_egreso--valor" id="egresoTolal">0</div>
+                <div class="presupuesto_egreso--porcentaje">0</div>
             </div>
-         </div>  
+        </div>
     </div>
- </div>
+</div>
 
- <form id="forma">
-   <div class="agrega">
-     <div class="agregar_contenedor">
-           <select class="agregar_tipo" id="tipo">
-               <option value="ingreso" selected>+</option>
-               <option value="egreso">-</option>
-           </select>
-           <input type="text" class="agregar_descripcion" placeholder="agregar_descripcion" id="descripcion">
-           <input type="number" class="agregar_valor" placeholder="valor" id="valor">
-           <button class="agregar_btn" onclick="agregarDato(event)"><ion-icon name="checkmark-circle"></ion-icon></button>
+<form id="forma">
+    <div class="agrega">
+        <div class="agregar_contenedor">
+            <select class="agregar_tipo" id="tipo">
+                <option value="ingreso" selected>+</option>
+                <option value="egreso">-</option>
+            </select>
+            <input type="text" class="agregar_descripcion" placeholder="agregar_descripcion" id="descripcion">
+            <input type="number" class="agregar_valor" placeholder="valor" id="valor">
+            <button class="agregar_btn" onclick="agregarDato(event)"><ion-icon
+                    name="checkmark-circle"></ion-icon></button>
 
         </div>
-   </div>
- </form>
-
-  <div class="contenedor limpiarEstilo">
-      <div class="ingreso">
-           <h2 class="ingreso_titulo"> ingresos</h2>
-           <div class="lista-ingresos" id="lista-ingresos">
- <!--          <div class="elemento limpiaEstilos">
+    </div>
+</form>
+<div class="contenedor limpiarEstilo">
+    <div class="ingreso">
+        <h2 class="ingreso_titulo"> ingresos</h2>
+        <div class="lista-ingresos" id="lista-ingresos">
+            <!--          <div class="elemento limpiaEstilos">
                   <div class="elemento_descripcion">sueldo</div>
                   <div class="derecha limpiaEstilos">
                       <div class="elemento_valor">400</div>
@@ -60,14 +60,14 @@
                       </div>
                   </div>
               </div>
-                -->     
-           </div>
-      </div>
+                -->
+        </div>
+    </div>
 
-      <div class="egreso">
+    <div class="egreso">
         <h2 class="egreso_titulo">egreso</h2>
-        <div class="lista-egresos">
-          <div class="elemento limpiaEstilos">
+        <div class="lista-egresos" id="lista-egresos">
+            <!--    <div class="elemento limpiaEstilos">
                <div class="elemento_descripcion">ropa</div>
                <div class="derecha limpiaEstilos">
                    <div class="elemento_valor">200</div>
@@ -79,8 +79,11 @@
                </div>
            </div>
       </div>
-   </div>
-  </div>
+      -->
+        </div>
+    </div>
+
+</div>
 
 
 
