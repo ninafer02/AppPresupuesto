@@ -2,6 +2,8 @@ let ingresosHTML="";
 let totalIngresos=0;
 let EgresoHTML="";
 let totalEgreso=0;
+let presupuesto=0;
+let porcentaje=0;
 let agregarDato =(event) =>{
   event.preventDefault();
   
@@ -17,7 +19,7 @@ let agregarDato =(event) =>{
       document.getElementById("descripcion").value="";
       document.getElementById("valor").value="";
     }else if(tipo==="egreso"){
-      //hace otra cosa
+      cargarEgresoHTML(descripcion, Number(valor));
     }
   }else{
     alert("debe completar todos los campos")
@@ -28,9 +30,12 @@ let agregarDato =(event) =>{
 let cargarIngresos = (descripcion, valor) =>{
   ingresosHTML+=crearIngresosHTML(descripcion, valor);
   totalIngresos+=valor;
+  porcentaje = (totalEgreso/totalIngresos*100);
+  presupuesto= (totalIngresos-totalEgreso);
   document.getElementById("ingresoTotal").textcontent = formatearCLP(totalIngresos);
-  document.getElementById("presupuesto").textContent = formatearCLP(totalIngresos);
+  document.getElementById("presupuesto").textContent = formatearCLP(presupuesto);
   document.getElementById("lista-ingresos").innerHTML=ingresosHTML;
+  document.getElementById("porcentaje").textContent= porcentaje + "%";
 }
 
 
@@ -56,11 +61,14 @@ function formatearCLP(numero) {
   }).format(numero);
 }
 let cargarEgresoHTML=(descripcion, Valor)=>{
-EgresoHTML -=CrearEgresoHTML(descripcion, Valor);
-totalEgreso-=Valor;
-document.getElementById("Egresototal").textContent = formatearCLP(totalEgreso);
-document.getElementById("presupuesto").textcontent = formatearCLP(totalEgreso);
-document.getElementById("lista-Egreso").innerHTML=EgresoHTML;
+EgresoHTML +=crearIngresosHTML(descripcion, Valor);
+totalEgreso+=Valor;
+ porcentaje = (totalEgreso/totalIngresos*100);
+ presupuesto= (totalIngresos-totalEgreso);
+document.getElementById("egresoTotal").textContent = formatearCLP(totalEgreso);
+document.getElementById("presupuesto").textcontent = formatearCLP(presupuesto);
+document.getElementById("lista-egresos").innerHTML=EgresoHTML;
+ document.getElementById("porcentaje").textContent= porcentaje + "%";
 }
 
 let CrearEgresoHTML=(descripcion, Valor)=>{

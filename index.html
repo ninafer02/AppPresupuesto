@@ -23,8 +23,8 @@
         <div class="presupuesto_egreso limpiaEstilos">
             <div class="presupuesto_egreso--texto">egreso</div>
             <div class="derecha">
-                <div class="presupuesto_egreso--valor" id="egresoTolal">0</div>
-                <div class="presupuesto_egreso--porcentaje">0</div>
+                <div class="presupuesto_egreso--valor" id="egresoTotal">0</div>
+                <div class="presupuesto_egreso--porcentaje" id="porcentaje">0%</div>
             </div>
         </div>
     </div>
@@ -35,12 +35,11 @@
         <div class="agregar_contenedor">
             <select class="agregar_tipo" id="tipo">
                 <option value="ingreso" selected>+</option>
-                <option value="egreso">-</option>
+                <option value="egreso" selected>-</option>
             </select>
             <input type="text" class="agregar_descripcion" placeholder="agregar_descripcion" id="descripcion">
             <input type="number" class="agregar_valor" placeholder="valor" id="valor">
-            <button class="agregar_btn" onclick="agregarDato(event)"><ion-icon
-                    name="checkmark-circle"></ion-icon></button>
+            <button class="agregar_btn" onclick="agregarDato(event)"><ion-icon name="checkmark-circle"></ion-icon></button>
 
         </div>
     </div>
