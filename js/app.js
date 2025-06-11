@@ -32,7 +32,7 @@ let cargarIngresos = (descripcion, valor) =>{
   totalIngresos+=valor;
   porcentaje = (totalEgreso/totalIngresos*100);
   presupuesto= (totalIngresos-totalEgreso);
-  document.getElementById("ingresoTotal").textcontent = formatearCLP(totalIngresos);
+  document.getElementById("ingresoTotal").textContent = formatearCLP(totalIngresos);
   document.getElementById("presupuesto").textContent = formatearCLP(presupuesto);
   document.getElementById("lista-ingresos").innerHTML=ingresosHTML;
   document.getElementById("porcentaje").textContent= porcentaje + "%";
@@ -66,7 +66,7 @@ totalEgreso+=Valor;
  porcentaje = (totalEgreso/totalIngresos*100);
  presupuesto= (totalIngresos-totalEgreso);
 document.getElementById("egresoTotal").textContent = formatearCLP(totalEgreso);
-document.getElementById("presupuesto").textcontent = formatearCLP(presupuesto);
+document.getElementById("presupuesto").textContent = formatearCLP(presupuesto);
 document.getElementById("lista-egresos").innerHTML=EgresoHTML;
  document.getElementById("porcentaje").textContent= porcentaje + "%";
 }
